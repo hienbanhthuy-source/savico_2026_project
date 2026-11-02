@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Báo cáo doanh thu bảo hiểm xe cơ giới</title>
+<meta name="description" content="Báo cáo tổng hợp doanh thu bảo hiểm xe cơ giới (chưa VAT) — tự cập nhật từ Google Drive, xem nhanh file Excel tải lên">
+<meta name="theme-color" content="#0b2a6b">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2a6b'/%3E%3Crect y='50' width='64' height='14' fill='%23d71920'/%3E%3Cpath d='M12 38l5-10h26l9 10v5H12z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"><svg width="22" height="12" viewBox="0 0 40 18"><path fill="#fff" d="M2 12.5c0-2 1-3.2 3-3.6l5-1.2 5.4-4.3c1-.8 2.2-1.2 3.5-1.2h7.3c1.4 0 2.7.6 3.6 1.6l3.2 3.6 3.1.6c1.6.3 2.9 1.7 2.9 3.4V14c0 .8-.6 1.4-1.4 1.4H3.4C2.6 15.4 2 14.8 2 14z"/></svg></div>
+      <div><div class="brand-t" id="bOrg">BẢO HIỂM PVI × SAVICO</div><div class="brand-s">Báo cáo doanh thu bảo hiểm xe cơ giới</div></div>
+    </div>
+    <div class="tools">
+      <span class="file-name" id="fileName" title="" hidden><span class="src-tag" id="srcTag">Google Drive</span><span id="fileText">Đang tìm file…</span></span>
+      <button type="button" class="btn" id="btnDrive" hidden><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5M4 9h11a5 5 0 0 1 0 10h-3"/></svg>Quay lại Google Drive</button>
+      <label class="btn primary upload" for="fileIn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0-4.5 4.5M12 4l4.5 4.5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>Upload
+      </label>
+      <input type="file" id="fileIn" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden>
+    </div>
+  </div>
+  <div class="wrap"><div class="status busy" id="srcStat" aria-live="polite"><i></i><span>Đang kết nối Google Drive…</span></div></div>
+</header>
+
+<main id="report"><div class="loading">Đang tải dữ liệu mới nhất từ Google Drive…</div></main>
+<div class="drop-ov" id="dropOv" aria-hidden="true"><div>Thả file Excel vào đây</div></div>
+
+<div class="tip" id="tip" role="tooltip"></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="contest.config.js"></script>
+<script src="js/report-adapter.js"></script>
+<script src="js/report.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/loader.js"></script>
+</body>
+</html>
